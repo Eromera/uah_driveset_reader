@@ -19,7 +19,6 @@ pip install pyqt5
 
 Execute the code with python: `python driveset_reader.py` or `python3 driveset_reader.py`
 
-
 ## License
 
 This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License, which allows for personal and research use only. For a commercial license please contact the authors. You can view a license summary here: http://creativecommons.org/licenses/by-nc/4.0/
