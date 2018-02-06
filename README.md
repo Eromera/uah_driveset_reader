@@ -7,11 +7,9 @@ This code is a public tool to read data from the UAH-DriveSet that can be downlo
 
 If you use this software in your research, please cite our publications:
 
-```
 Romera, Eduardo, Luis M. Bergasa, and Roberto Arroyo. **"Need data for driver behaviour analysis? Presenting the public UAH-DriveSet."** In Intelligent Transportation Systems (ITSC), 2016 IEEE 19th International Conference on, pp. 387-392. IEEE, 2016.
 
 Romera, Eduardo, Luis M. Bergasa, and Roberto Arroyo. **"A real-time multi-scale vehicle detection and tracking approach for smartphones."** In Intelligent Transportation Systems (ITSC), 2015 IEEE 18th International Conference on, pp. 1298-1303. IEEE, 2015.
-```
 
 
 ## Installation of dependencies
