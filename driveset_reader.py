@@ -1,3 +1,4 @@
+#!/usr/bin/env python3
 import numpy as np   #vector management
 import time
 import sys
@@ -258,7 +259,6 @@ class figureToPlot(QtWidgets.QVBoxLayout):
 
    def plot(self):
       self.ax = self.figure.add_subplot(111)
-      self.ax.hold(False)	# discards the old graph
       #self.figure.tight_layout()
       #self.ax.axis([0, timeWindow , 0, 1000])  #just to fix the padding calculation
       #self.figure.tight_layout(pad=0.1, w_pad=0.1, h_pad=0.1)
@@ -913,21 +913,20 @@ class WindowPlot(QtWidgets.QMainWindow):
       global videoCorrect
       self.frameNumber = 0
       try:
-         imageio.plugins.ffmpeg.download()  #need ffmpeg to load the video
          self.videoReader = imageio.get_reader(videoName, 'ffmpeg')
          videoCorrect = True
       except:
+         print('try to install: pip install --upgrade imageio-ffmpeg')
          videoCorrect = False
 
       if (videoCorrect):
          global fps
          video_meta = self.videoReader.get_meta_data()   #returns dict
-         #print (video_meta)
          fps = video_meta['fps']
          print (fps)
          if (fps == 0):	#error control for division by 0
-	         fps = 30
-         self.totalFrames = self.videoReader.get_length()
+            fps = 30
+         self.totalFrames = self.videoReader.count_frames()
          self.sliderVideoFrame.setRange(0, (self.totalFrames/fps))
          self.updateDatesInfo()
 
