@@ -20,8 +20,10 @@ The code imports the following libraries: numpy, matplotlib, imageio and pyqt5.
 You can install them by using ["pip"](https://pip.pypa.io/en/stable/installing/) command from python in a terminal (Linux users: you might need to use sudo depending on your filesystem permissions): 
 
 ```
-pip install numpy matplotlib imageio pyqt5
+pip install numpy matplotlib==2.2.5 imageio==2.4.1 pyqt5
 ``` 
+
+NOTE (Changed on June 4th 2021): I have added the matplotlib==2.2.5 and imageio==2.4.1 versions because using the new versions of these libraries results in 2 errors that are due to function deprecations (imageio when loading the video, and matplotlib when plotting the data). If you install these specific versions you will avoid the error, although these errors can be solved by updating just a few lines on the code with a suitable function replacement. Sorry for the trouble! I will update these lines and push the modifications when I find time to do it. 
 
 ## Usage
 
